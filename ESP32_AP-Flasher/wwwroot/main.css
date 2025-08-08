@@ -236,6 +236,12 @@ label {
 	}
 }
 
+#apnodiscovery {
+	background-color: white;
+	padding: 0px 10px;
+	margin-bottom: 15px;
+}
+
 #aplist {
 	display: flex;
 	gap: 1em;

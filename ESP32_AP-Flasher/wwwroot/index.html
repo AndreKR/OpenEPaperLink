@@ -203,6 +203,10 @@
 
 			<div id="aptab" class="tabcontent">
 				<h3>Active access points</h3>
+				
+				<div id="apnodiscovery" style="display:none;">
+					AP discovery is disabled, only the current AP is shown.
+				</div>
 
 				<div id="aplist">
 					<div id="apcard" class="apcard">
@@ -478,6 +482,7 @@ options:
 					<select id="apcdiscovery">
 						<option value="0" selected>Multicast</option>
 						<option value="1">Broadcast</option>
+						<option value="2">None</option>
 					</select>
 				</p>
 				<p title="Show a timestamp on the screen when the tag is updated">

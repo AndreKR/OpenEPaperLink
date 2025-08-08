@@ -40,7 +40,7 @@ void UDPcomm::init() {
                 }
             });
         }
-    } else {
+    } else if (config.discovery == 1) {
         if (udp.listen(UDPPORT)) {
             udp.onPacket([this](AsyncUDPPacket packet) {
                 if (packet.isBroadcast() && packet.remoteIP() != wm.localIP()) {
@@ -210,7 +210,7 @@ void UDPcomm::netTaginfo(struct TagInfo* taginfoitem) {
 void UDPcomm::writeUdpPacket(uint8_t *buffer, uint16_t len, IPAddress senderIP) {
     if (config.discovery == 0) {
         udp.writeTo(buffer, len, senderIP, UDPPORT);
-    } else {
+    } else if (config.discovery == 1) {
         udp.broadcastTo(buffer, len, UDPPORT);
     }
 }

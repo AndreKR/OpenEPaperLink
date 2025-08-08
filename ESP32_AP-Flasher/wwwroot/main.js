@@ -812,6 +812,10 @@ document.addEventListener("loadTab", function (event) {
 						$("#apcnight2").value = data.sleeptime2;
 						$("#apcdiscovery").value = data.discovery;
 						$("#apcshowtimestamp").value = data.showtimestamp;
+						
+						if (data.discovery == 2) {
+							$('#apnodiscovery').style.display = 'block';
+						}
 					}
 				})
 			$('#apcfgmsg').innerHTML = '';
